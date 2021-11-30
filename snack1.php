@@ -18,6 +18,9 @@ $age = "";
 
 <body>
     <?php
+    if (!isset($_GET["name"]) || !isset($_GET["email"]) || !isset($_GET["age"])) {
+        exit("Valori errari");
+    }
     if (strlen($_GET["name"]) > 3) {
         $name = $_GET["name"];
     }
